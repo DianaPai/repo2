@@ -27,7 +27,7 @@ def main():
     append_comment_to_file(args.file, args.comment)
 
     run_command(f"git add {args.file}")
-    run_command(f'git commit -m "{args.message}" -C "/mnt/imported/code/repo2')
+    run_command(f'git commit -m "{args.message}" -C "/mnt/imported/code/repo2")
 
     branch = args.branch or run_command("git rev-parse --abbrev-ref HEAD", capture_output=True)
     run_command(f"git push origin {branch}")
